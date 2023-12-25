@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    echo "=== Building Docker Image ==="
+                    echo "=== Building Image ==="
                     
                     // Use Docker Hub credentials from Jenkins Credential Store
                     withCredentials([usernamePassword(credentialsId: 'Mnop1234.', usernameVariable: 'DOCKER_HUB_USERNAME', passwordVariable: 'DOCKER_HUB_PASSWORD')]) {
